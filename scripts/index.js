@@ -1,15 +1,19 @@
 window.onload = () => {
 
  const books = [];
-
- const Book = (title, author) => {
+ const bookSection = document.getElementById('book_section');
+ function Book(title, author) {
   const element = document.createElement('div');
-  element.className = 'card'
+  element.className = 'card';
   element.innerHTML = 
   `<h2 class="card-title">${title}</h2>
    <h3 class="card-author">${author}</h3>
-   <button type="button" class="btn" onclick="removeHandler()">Remove</button>
-  `
+  `;
+  const removeButton = document.createElement('button');
+  removeButton.className = 'btn';
+  removeButton.innerHTML = 'Remove';
+  removeButton.onclick = removeHandler;
+  element.append(removeButton, document.createElement('hr'));
   this.title = title;
   this.author = author;
   this.element = element;
@@ -29,11 +33,16 @@ window.onload = () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   if(createAndAddNewBook(title, author, books)){
-   const bookSection = document.getElementById('book_section');
    bookSection.innerHTML = '';
    bookSection.append(...books.map(book => book.element));
   }
  });
-
+ 
+ function removeHandler(e) {
+  const card = e.target.parentNode;
+  const title = card.children[0].innerHTML;
+  bookSection.removeChild(card);
+  removeBook(title, books);
+ }
  
 }
