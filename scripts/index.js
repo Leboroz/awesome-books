@@ -29,15 +29,20 @@ window.onload = () => {
   this.author = author;
   this.element = createCard(title, author);
  }
-
+ 
  const createAndAddNewBook = (title, author, collection) => {
   return collection.length < collection.push(new Book(title, author));
  }
-
- const removeBook = (reference, collection) => {
-  collection.filter(book => book.title !== reference || book.author !== reference);
+ 
+ const removeBook = (reference) => {
+  books = books.filter(book => book.title !== reference);
+  updateLocalStorage();
  }
  
+ const updateLocalStorage = () => {
+   localStorage.setItem('books', JSON.stringify(books));
+ }
+
  document
  .getElementById('add_button')
  .addEventListener('click', () => {
@@ -46,7 +51,7 @@ window.onload = () => {
   if(createAndAddNewBook(title, author, books)){
    bookSection.innerHTML = '';
    bookSection.append(...books.map(book => createCard(book.title, book.author)));
-   localStorage.setItem('books', JSON.stringify(books));
+   updateLocalStorage();
   }
  });
  
@@ -54,7 +59,7 @@ window.onload = () => {
   const card = e.target.parentNode;
   const title = card.children[0].innerHTML;
   bookSection.removeChild(card);
-  removeBook(title, books);
+  removeBook(title);
  }
  
 }
