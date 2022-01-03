@@ -14,7 +14,5 @@ window.onload = () => {
  const removeBook = (reference, collection) => {
   collection.filter(book => book.title !== reference || book.author !== reference);
  }
-
- const bookSection = document.getElementById('book_section');
  
 }
