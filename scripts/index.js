@@ -1,8 +1,7 @@
 window.onload = () => {
-
- const books = [];
  const bookSection = document.getElementById('book_section');
- function Book(title, author) {
+
+ const createCard = (title, author) => {
   const element = document.createElement('div');
   element.className = 'card';
   element.innerHTML = 
@@ -14,9 +13,21 @@ window.onload = () => {
   removeButton.innerHTML = 'Remove';
   removeButton.onclick = removeHandler;
   element.append(removeButton, document.createElement('hr'));
+  return element;
+ }
+
+ let books;
+ if(localStorage.getItem('books') !== null){
+  books = JSON.parse(localStorage.getItem('books'));
+  bookSection.append(...books.map(book => createCard(book.title, book.author)));
+ } else {
+  books = [];
+ }
+
+ function Book(title, author) {
   this.title = title;
   this.author = author;
-  this.element = element;
+  this.element = createCard(title, author);
  }
 
  const createAndAddNewBook = (title, author, collection) => {
@@ -26,7 +37,7 @@ window.onload = () => {
  const removeBook = (reference, collection) => {
   collection.filter(book => book.title !== reference || book.author !== reference);
  }
-
+ 
  document
  .getElementById('add_button')
  .addEventListener('click', () => {
@@ -34,7 +45,8 @@ window.onload = () => {
   const author = document.getElementById('author').value;
   if(createAndAddNewBook(title, author, books)){
    bookSection.innerHTML = '';
-   bookSection.append(...books.map(book => book.element));
+   bookSection.append(...books.map(book => createCard(book.title, book.author)));
+   localStorage.setItem('books', JSON.stringify(books));
   }
  });
  
