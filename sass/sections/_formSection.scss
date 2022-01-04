@@ -1,0 +1,20 @@
+@use '../default' as *;
+
+.form-section {
+  background-color: $secondary;
+
+  .display-1 {
+    color: $primary;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    input {
+      padding: 0.25rem 0.75rem;
+      color: $primary;
+    }
+  }
+}

@@ -1,3 +1,16 @@
+@use '../default' as *;
+
 .btn {
   font-size: small;
+  display: block;
+  height: fit-content(1rem);
+  background-color: $yellow;
+  padding: 0.25rem 1rem;
+  border: 1px solid $yellow;
+  color: #fff;
+  box-shadow: 6px 2px 5px rgba($color: #000, $alpha: 0.4);
+
+  &:hover {
+    background-color: #000;
+  }
 }

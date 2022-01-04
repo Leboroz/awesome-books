@@ -1,13 +1,131 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #1a374d;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column-center {
+  flex-direction: column;
+  align-items: center;
+}
+
+.padding-y {
+  padding-block: 3rem;
 }
 
 .btn {
   font-size: small;
+  display: block;
+  height: fit-content(1rem);
+  background-color: #ff9400;
+  padding: 0.25rem 1rem;
+  border: 1px solid #ff9400;
+  color: #fff;
+  box-shadow: 6px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background-color: #000;
+}
+
+.display-1 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #6998ab;
+  margin-bottom: 2rem;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .book-section {
-  background-color: #fff;
+  padding-inline: 0.5rem;
+  justify-content: center;
+}
+
+.book-section .table {
+  border: 1px solid #1a374d;
+  background-color: #406882;
+  width: 100%;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.4);
+  min-height: 54px;
+  text-align: center;
+}
+
+.book-section .table[data-visible=false] {
+  position: relative;
+}
+
+.book-section .table[data-visible=false]::after {
+  content: "No books have been added";
+  color: #fff;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .book-section .table {
+    width: 70%;
+  }
+}
+
+.book-section .table .row {
+  padding: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #406882;
+  color: #b1d0e0;
+  animation: pop 0.4s linear;
+}
+
+.book-section .table .row-odd {
+  background-color: #b1d0e0;
+  color: #1a374d;
+}
+
+.book-section .table .row-title {
+  font-size: 0.75rem;
+  max-width: 50%;
+}
+
+.form-section {
+  background-color: #406882;
+}
+
+.form-section .display-1 {
+  color: #1a374d;
+}
+
+.form-section .form {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.form-section .form input {
+  padding: 0.25rem 0.75rem;
+  color: #1a374d;
 }
 
 /* -------------------------------------------------------------------------- */

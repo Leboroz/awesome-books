@@ -12,10 +12,12 @@
 /* -------------------------------------------------------------------------- */
 @use './components/buttons';
 @use './components/mixins';
+@use './components/typography';
 
 /* -------------------------------------------------------------------------- */
 
 /*                                  SECTIONS                                  */
 
 /* -------------------------------------------------------------------------- */
-@use './sections/bookSection'
+@use './sections/bookSection';
+@use './sections/formSection';

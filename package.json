@@ -4,7 +4,10 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass --watch sass:assets/css",
+    "stylint": "npx stylelint \"**/*.{css,scss}\" --fix",
+    "eslint": "npx eslint . --fix",
+    "weblint": "npx hint ."
   },
   "repository": {
     "type": "git",
