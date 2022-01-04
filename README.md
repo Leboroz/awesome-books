@@ -16,7 +16,22 @@
 
 [Live Demo Link](https://leboroz.github.io/awesome-books/)
 
+## Getting Started
 
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+- git installed
+### Setup
+Open a terminal and run:
+```
+$ git clone https://github.com/Leboroz/awesome-books.git
+
+$ cd awesome-books
+
+$ open index.html
+```
 ## Authors
 
 👤 ** Leonardo Albornoz **
