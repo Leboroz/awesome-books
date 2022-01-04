@@ -1,6 +1,6 @@
 import Book from './book.js';
 
-export default class list {
+export default class Methods {
   constructor() {
     this.list = [];
   }

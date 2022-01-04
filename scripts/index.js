@@ -1,6 +1,6 @@
-import BookList from './components/bookList.js';
+import Methods from './components/bookList.js';
 
-const bookList = new BookList();
+const bookList = new Methods();
 
 window.onload = () => {
   const bookSection = document.getElementById('book_section');
