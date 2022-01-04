@@ -1,20 +1,13 @@
-class Book {
- constructor(title, author) {
-  this.title = title;
-  this.author = author;
- }
-}
+import Book from './book.js';
 
 export default class list {
- constructor() {
-  this.list = []
- }
+  constructor() {
+    this.list = [];
+  }
 
- createAndAddNewBook = (title, author) => {
-  return this.list.length < this.list.push(new Book(title, author));
- }
+ createAndAddNewBook = (title, author) => this.list.length < this.list.push(new Book(title, author))
 
  removeBook = (reference) => {
-  this.list = this.list.filter(book => book.title !== reference);
+   this.list = this.list.filter((book) => book.title !== reference);
  }
 }
