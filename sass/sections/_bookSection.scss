@@ -1,0 +1,51 @@
+@use '../default' as *;
+@use '../components/mixins' as *;
+
+.book-section {
+  padding-inline: 0.5rem;
+  justify-content: center;
+
+  .table {
+    border: 1px solid $primary;
+    background-color: $secondary;
+    width: 100%;
+    box-shadow: 5px 2px 5px rgba($color: #000, $alpha: 0.4);
+    min-height: 54px;
+    text-align: center;
+
+    &[data-visible="false"] {
+      position: relative;
+
+      &::after {
+        content: 'No books have been added';
+        color: #fff;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(lg) {
+      width: 70%;
+    }
+
+    .row {
+      padding: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $secondary;
+      color: $light;
+
+      &-odd {
+        background-color: $light;
+        color: $primary;
+      }
+
+      &-title {
+        font-size: 0.75rem;
+        max-width: 50%;
+      }
+    }
+  }
+}

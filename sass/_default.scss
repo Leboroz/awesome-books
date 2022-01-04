@@ -1,3 +1,29 @@
+$primary: #1a374d;
+$secondary: #406882;
+$yellow: #ff9400;
+$green: #6998ab;
+$light: #b1d0e0;
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: $primary;
+}
+
+.flex {
+  display: flex;
+
+  &-column-center {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.padding-y {
+  padding-block: 3rem;
 }

@@ -8,6 +8,6 @@ export default class Methods {
  createAndAddNewBook = (title, author) => this.list.length < this.list.push(new Book(title, author))
 
  removeBook = (reference) => {
-   this.list = this.list.filter((book) => book.title !== reference);
+   this.list = this.list.filter((book) => `"${book.title}" by ${book.author}` !== reference);
  }
 }

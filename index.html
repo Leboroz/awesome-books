@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script src="./scripts/index.js" type="module"></script>
- <title>Awesome books</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./scripts/index.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Awesome books</title>
 </head>
 <body>
- <header>
-  <h1>Awesome books</h1>
- </header>
+ <header class="flex flex-column-center"></header>
 
- <main>
-  <section id="book_section" class="book-section"></section>
-  
-  <section>
-   <form>
+<main>
+  <section class="book-section flex flex-column-center padding-y">
+    <h1 class="display-1">Awesome books</h1>
+    <article data-visible="false" id="book_section" class="table"></article>
+  </section>
+
+  <section class="form-section flex flex-column-center padding-y">
+    <h2 class="display-1">Add a new book</h2>
+    <form id="form" class="form flex">
     <label>
-     <input type="text" id="title" name="title" placeholder="title">
+      <input type="text" id="title" name="title" placeholder="Title" required>
     </label>
     <label>
-     <input type="text" id="author" name="author" placeholder="Author">
+      <input type="text" id="author" name="author" placeholder="Author" required>
     </label>
-     <button id="add_button" type="button">Add</button>
-   </form>
+      <button id="add_button" type="submit" class="btn">Add</button>
+    </form>
   </section>
  </main>
 
