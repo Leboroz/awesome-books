@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/_default.scss","../../sass/components/_buttons.scss","../../sass/sections/bookSection.scss","../../sass/style.scss"],"names":[],"mappings":"AAAA;EACE;;;ACDF;EACE;;;ACDF;EACE;;;ACDF;AAEA;AAEA;AAGA;AAEA;AAEA;AAIA;AAEA;AAEA","file":"style.css"}
