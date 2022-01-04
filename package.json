@@ -1,0 +1,26 @@
+{
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leboroz/awesome-books.git"
+  },
+  "keywords": [
+    "Books",
+    "microverse",
+    "leboroz",
+    "leonardo",
+    "albornoz"
+  ],
+  "author": "Leonardo Albornoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leboroz/awesome-books/issues"
+  },
+  "homepage": "https://github.com/Leboroz/awesome-books#readme"
+}
