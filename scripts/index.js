@@ -49,11 +49,7 @@ window.onload = () => {
       const title = document.getElementById('title').value;
       const author = document.getElementById('author').value;
       if (title && author && bookList.createAndAddNewBook(title, author)) {
-        bookSection.innerHTML = '';
-        bookSection
-          .append(...bookList.list.map(
-            (book, index) => createCard(book.title, book.author, index),
-          ));
+        bookSection.appendChild(createCard(title, author, bookList.list.length - 1));
         bookSection.setAttribute('data-visible', 'true');
         updateLocalStorage();
         e.preventDefault();
