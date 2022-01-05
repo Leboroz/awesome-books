@@ -3,6 +3,7 @@ $secondary: #406882;
 $yellow: #ff9400;
 $green: #6998ab;
 $light: #b1d0e0;
+$red: #970011;
 
 * {
   box-sizing: border-box;
@@ -13,6 +14,7 @@ $light: #b1d0e0;
 
 body {
   background-color: $primary;
+  height: 100%;
 }
 
 .flex {
@@ -24,6 +26,15 @@ body {
   }
 }
 
-.padding-y {
+.sections {
+  position: relative;
+}
+
+.section {
   padding-block: 3rem;
+  position: absolute;
+  width: 100vw;
+  height: 600px;
+  top: 0;
+  left: 0;
 }
