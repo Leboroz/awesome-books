@@ -7,19 +7,28 @@
 
 body {
   background-color: #1a374d;
+  height: 100%;
 }
 
 .flex {
   display: flex;
 }
-
 .flex-column-center {
   flex-direction: column;
   align-items: center;
 }
 
-.padding-y {
+.sections {
+  position: relative;
+}
+
+.section {
   padding-block: 3rem;
+  position: absolute;
+  width: 100vw;
+  height: 600px;
+  top: 0;
+  left: 0;
 }
 
 .btn {
@@ -32,7 +41,6 @@ body {
   color: #fff;
   box-shadow: 6px 2px 5px rgba(0, 0, 0, 0.4);
 }
-
 .btn:hover {
   background-color: #000;
 }
@@ -47,21 +55,17 @@ body {
   0% {
     transform: scale(0.9);
   }
-
   50% {
     transform: scale(1.2);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 .book-section {
   padding-inline: 0.5rem;
   justify-content: center;
 }
-
 .book-section .table {
   border: 1px solid #1a374d;
   background-color: #406882;
@@ -70,11 +74,9 @@ body {
   min-height: 54px;
   text-align: center;
 }
-
 .book-section .table[data-visible=false] {
   position: relative;
 }
-
 .book-section .table[data-visible=false]::after {
   content: "No books have been added";
   color: #fff;
@@ -83,13 +85,11 @@ body {
   left: 0;
   width: 100%;
 }
-
 @media screen and (min-width: 992px) {
   .book-section .table {
     width: 70%;
   }
 }
-
 .book-section .table .row {
   padding: 0.75rem;
   justify-content: space-between;
@@ -98,12 +98,10 @@ body {
   color: #b1d0e0;
   animation: pop 0.4s linear;
 }
-
 .book-section .table .row-odd {
   background-color: #b1d0e0;
   color: #1a374d;
 }
-
 .book-section .table .row-title {
   font-size: 0.75rem;
   max-width: 50%;
@@ -112,36 +110,57 @@ body {
 .form-section {
   background-color: #406882;
 }
-
 .form-section .display-1 {
   color: #1a374d;
 }
-
 .form-section .form {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.5rem;
 }
-
 .form-section .form input {
   padding: 0.25rem 0.75rem;
   color: #1a374d;
 }
 
-/* -------------------------------------------------------------------------- */
+.contact-section {
+  background-color: #1a374d;
+}
 
+.navbar-section {
+  width: 100vw;
+  height: 100px;
+  padding: 1rem;
+}
+.navbar-section .navbar {
+  width: 100%;
+  background-color: #ff9400;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+.navbar-section .navbar .nav-links {
+  list-style: none;
+  gap: 10px;
+}
+.navbar-section .navbar .nav-links .nav-link {
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  border: 0.5px solid #970011;
+}
+.navbar-section .navbar .nav-links .nav-link:hover, .navbar-section .navbar .nav-links .nav-link__active {
+  background-color: #970011;
+  color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                               IMPORT DEFAULT                               */
-
 /* -------------------------------------------------------------------------- */
-
 /* -------------------------------------------------------------------------- */
-
 /*                              IMPORT COMPNENTS                              */
-
 /* -------------------------------------------------------------------------- */
-
 /* -------------------------------------------------------------------------- */
-
 /*                                  SECTIONS                                  */
-
 /* -------------------------------------------------------------------------- */
+
+/*# sourceMappingURL=style.css.map */

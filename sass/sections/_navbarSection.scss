@@ -1,0 +1,29 @@
+@use '../default' as *;
+.navbar-section {
+ width: 100vw;
+ height: 100px;
+ padding: 1rem;
+
+ .navbar {
+  width: 100%;
+  background-color: $yellow;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+
+  .nav-links {
+   list-style: none;
+   gap: 10px;
+
+   .nav-link {
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    border: 0.5px solid $red;
+    &:hover, &__active {
+     background-color: $red;
+     color: #fff;
+    }
+   }
+  }
+ }
+}
