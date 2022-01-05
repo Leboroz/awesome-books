@@ -19,5 +19,8 @@
 /*                                  SECTIONS                                  */
 
 /* -------------------------------------------------------------------------- */
+@use './sections/navbarSection';
 @use './sections/bookSection';
 @use './sections/formSection';
+@use './sections/contact';
+@use './sections/footer';

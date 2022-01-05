@@ -13,27 +13,70 @@
   <title>Awesome books</title>
 </head>
 <body>
- <header class="flex flex-column-center"></header>
-
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                             NAVBAR SECTION                              -->
+  <!-- ----------------------------------------------------------------------- -->
+<header class="navbar-section flex">
+  <nav class="navbar flex">
+    <ul id="nav_links" class="nav-links flex">
+      <li class="nav-link nav-link__active">List</li>
+      <li class="nav-link">Add new</li>
+      <li class="nav-link">Contact</li>
+    </ul>
+  </nav>
+  <span id="date" class="date"></span>
+</header>
 <main>
-  <section class="book-section flex flex-column-center padding-y">
-    <h1 class="display-1">Awesome books</h1>
-    <article data-visible="false" id="book_section" class="table"></article>
-  </section>
-
-  <section class="form-section flex flex-column-center padding-y">
-    <h2 class="display-1">Add a new book</h2>
-    <form id="form" class="form flex">
-    <label>
-      <input type="text" id="title" name="title" placeholder="Title" required>
-    </label>
-    <label>
-      <input type="text" id="author" name="author" placeholder="Author" required>
-    </label>
+  <section class="sections">
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                BOOK LIST                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <article class="section current-section book-section flex flex-column-center">
+      <h1 class="display-1">Awesome books</h1>
+      <div data-visible="false" id="book_section" class="table"></div>
+    </article>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            ADD FORM SECTION                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <article class="section form-section flex flex-column-center padding-y">
+      <h2 class="display-1">Add a new book</h2>
+      <form id="form" class="form flex">
+      <label>
+        <input type="text" id="title" name="title" placeholder="Title" required>
+      </label>
+      <label>
+        <input type="text" id="author" name="author" placeholder="Author" required>
+      </label>
       <button id="add_button" type="submit" class="btn">Add</button>
-    </form>
+      </form>
+    </article>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             CONTACT SECTION                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <article class="section contact-section flex flex-column-center">
+      <h2 class="display-1">Contact Information</h2>
+      <p class="par">Do you have any questions or just want to say "Hello!"?</p>
+      <form action="https://formspree.io/f/mayvnayl" method="POST" class="form">
+        <label class="label">
+          Your name:
+          <input class="field" type="text" name="name" placeholder="name" required>
+        </label>
+        <label class="label">
+          Your email:
+          <input class="field" name="email" type="email" placeholder="email" required>
+        </label>
+        <label class="label message-wrapper">
+          <textarea name="message" id="messsage" cols="30" rows="10" class="field message" placeholder="Write your message..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </article>
   </section>
  </main>
-
+<footer class="footer">
+  <div class="footer-section">
+    <p class="copyright">Made by Leonardo Albornoz</p>
+  </div>
+</footer>
 </body>
 </html>
