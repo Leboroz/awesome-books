@@ -12,8 +12,10 @@ window.onload = () => {
   const tracks = document.querySelector('.sections');
   const sections = Array.from(tracks.children);
   const navLinks = document.getElementById('nav_links');
-  console.log(bookSection)
-
+  const date = document.getElementById('date');
+  setInterval(() => {
+    date.innerHTML = new Date().toUTCString();
+  }, 1000)
   const removeHandler = (e) => {
     const card = e.target.parentNode;
     const title = card.children[0].innerHTML;

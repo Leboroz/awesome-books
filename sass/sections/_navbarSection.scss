@@ -3,13 +3,15 @@
  width: 100vw;
  height: 100px;
  padding: 1rem;
+ flex-direction: column;
+ align-items: flex-end;
 
  .navbar {
   width: 100%;
   background-color: $yellow;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 1rem;
+  padding: 1rem;
 
   .nav-links {
    list-style: none;
@@ -25,5 +27,11 @@
     }
    }
   }
+ }
+
+ .date {
+  margin-top: 1rem;
+  z-index: 10;
+  color: #fff;
  }
 }
