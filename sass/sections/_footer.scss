@@ -1,13 +1,14 @@
 @use '../default' as *;
 
 .footer {
- padding: 1rem;
- &-section {
-  background-color: $yellow;
+  padding: 1rem;
 
-  .copyright {
-   width: 100%;
-   text-align: center;
+  &-section {
+    background-color: $yellow;
+
+    .copyright {
+      width: 100%;
+      text-align: center;
+    }
   }
- }
 }
