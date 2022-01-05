@@ -18,7 +18,7 @@
   <!-- ----------------------------------------------------------------------- -->
 <header class="navbar-section flex">
   <nav class="navbar flex">
-    <ul class="nav-links flex">
+    <ul id="nav_links" class="nav-links flex">
       <li class="nav-link nav-link__active">List</li>
       <li class="nav-link">Add new</li>
       <li class="nav-link">Contact</li>
@@ -26,41 +26,42 @@
   </nav>
   <span id="date" class="date"></span>
 </header>
-<main class="sections">
-  <section class="section book-section flex flex-column-center">
-    <h1 class="display-1">Awesome books</h1>
-    <article data-visible="false" id="book_section" class="table"></article>
-  </section>
-  <section class="section form-section flex flex-column-center padding-y">
-    <h2 class="display-1">Add a new book</h2>
-    <form id="form" class="form flex">
-    <label>
-      <input type="text" id="title" name="title" placeholder="Title" required>
-    </label>
-    <label>
-      <input type="text" id="author" name="author" placeholder="Author" required>
-    </label>
+<main>
+  <section class="sections">
+    <article class="section current-section book-section flex flex-column-center">
+      <h1 class="display-1">Awesome books</h1>
+      <div data-visible="false" id="book_section" class="table"></div>
+    </article>
+    <article class="section form-section flex flex-column-center padding-y">
+      <h2 class="display-1">Add a new book</h2>
+      <form id="form" class="form flex">
+      <label>
+        <input type="text" id="title" name="title" placeholder="Title" required>
+      </label>
+      <label>
+        <input type="text" id="author" name="author" placeholder="Author" required>
+      </label>
       <button id="add_button" type="submit" class="btn">Add</button>
-    </form>
-  </section>
-  <section class="section contact-section">
-    <h2 class="display-1"></h2>
-    <p class="par"></p>
-    <form action="https://formspree.io/f/mayvnayl" method="POST" class="form flex">
-      <label>
-        Your name:
-        <input type="text" required>
-      </label>
-      <label>
-        Your email:
-        <input type="email" required>
-      </label>
-      <label>
-        Your message:
-        <textarea name="message" id="messsage" cols="30" rows="10" class="message" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
+      </form>
+    </article>
+    <article class="section contact-section flex flex-column-center">
+      <h2 class="display-1">Contact Information</h2>
+      <p class="par">Do you have any questions or just want to say "Hello!"?</p>
+      <form action="https://formspree.io/f/mayvnayl" method="POST" class="form">
+        <label class="label">
+          Your name:
+          <input class="field" type="text" name="name" placeholder="name" required>
+        </label>
+        <label class="label">
+          Your email:
+          <input class="field" name="email" type="email" placeholder="email" required>
+        </label>
+        <label class="label message-wrapper">
+          <textarea name="message" id="messsage" cols="30" rows="10" class="field message" placeholder="Write your message..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </article>
   </section>
  </main>
 <footer class="footer">

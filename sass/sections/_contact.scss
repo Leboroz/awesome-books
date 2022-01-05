@@ -1,4 +1,45 @@
 @use '../default' as *;
+@use '../components/mixins' as *;
 .contact-section {
  background-color: $primary;
+
+ .par {
+  color: $light;
+  margin-bottom: 3rem;
+ }
+
+ .label {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  .field {
+   border-radius: 2px;
+   padding: 5px 15px;
+   border: 0;
+  }
+ }
+ 
+ .form {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  @include breakpoint(lg) {
+   width: 40%;
+  }
+
+  .message-wrapper {
+   grid-column: 1 / span 2;
+
+   .message {
+    resize: none;
+   }
+  }
+ }
+ .btn {
+  grid-column: 1 / span 2;
+  align-self: center;
+ }
+
 }

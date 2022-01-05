@@ -10,6 +10,10 @@ body {
   height: 100%;
 }
 
+main {
+  overflow: hidden;
+}
+
 .flex {
   display: flex;
 }
@@ -19,16 +23,17 @@ body {
 }
 
 .sections {
+  width: 100vw;
+  height: 600px;
   position: relative;
 }
 
 .section {
+  width: 100%;
+  height: 100%;
   padding-block: 3rem;
   position: absolute;
-  width: 100vw;
-  height: 600px;
   top: 0;
-  left: 0;
 }
 
 .btn {
@@ -48,6 +53,7 @@ body {
 .display-1 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: #6998ab;
+  font-size: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -64,7 +70,6 @@ body {
 }
 .book-section {
   padding-inline: 0.5rem;
-  justify-content: center;
 }
 .book-section .table {
   border: 1px solid #1a374d;
@@ -125,6 +130,41 @@ body {
 
 .contact-section {
   background-color: #1a374d;
+}
+.contact-section .par {
+  color: #b1d0e0;
+  margin-bottom: 3rem;
+}
+.contact-section .label {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.contact-section .label .field {
+  border-radius: 2px;
+  padding: 5px 15px;
+  border: 0;
+}
+.contact-section .form {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .contact-section .form {
+    width: 40%;
+  }
+}
+.contact-section .form .message-wrapper {
+  grid-column: 1/span 2;
+}
+.contact-section .form .message-wrapper .message {
+  resize: none;
+}
+.contact-section .btn {
+  grid-column: 1/span 2;
+  align-self: center;
 }
 
 .navbar-section {
