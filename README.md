@@ -29,9 +29,9 @@ Open a terminal and run:
 $ git clone https://github.com/Leboroz/awesome-books.git
 
 $ cd awesome-books
-
-$ open index.html
 ```
+open index.html
+
 ## Authors
 
 👤 ** Leonardo Albornoz **
@@ -39,12 +39,6 @@ $ open index.html
 - GitHub: [@Leboroz](https://github.com/leboroz)
 - Twitter: [@Leboroz](https://twitter.com/leboroz)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/leonardo-albornoz-216784198/)
-
-👤 **Vincent Abuya Obunga**
-
-- GitHub: [@vabuyia](https://github.com/vabuyia)
-- Twitter: [@abuyiag](https://twitter.com/abuyiag)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/vincent-abuya-a1940555)
 
 ## 🤝 Contributing
 
